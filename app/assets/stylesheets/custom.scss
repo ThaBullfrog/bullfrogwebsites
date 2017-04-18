@@ -26,17 +26,20 @@ body {
   }
 }
 
-.border-between > [class*='col-']:before,
-.border-between > [class*='col-']:after {
+.border-between > [class*='col-'] {
+  &:before, &:after {
     background: #FFF;
     bottom: 0;
     content: " ";
     position: absolute;
     width: 1px;
     top: 0;
+  }
+  &:before {
+    left: 0;
+  }
 }
 .border-between > [class*='col-']:before {
-    left: 0;
 }
 .border-between > [class*='col-']:after {
     right: -1px;
