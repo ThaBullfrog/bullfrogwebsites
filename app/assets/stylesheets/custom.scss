@@ -1,0 +1,141 @@
+@import "custom_navbar";
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+body {
+  background: $background-color;
+}
+
+.alert {
+  margin: 5px;
+}
+
+.content {
+  font-size: 20px;
+  h1 {
+    margin: 0;
+    padding: 5px 0;
+  }
+  .row div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.border-between > [class*='col-']:before,
+.border-between > [class*='col-']:after {
+    background: #FFF;
+    bottom: 0;
+    content: " ";
+    position: absolute;
+    width: 1px;
+    top: 0;
+}
+.border-between > [class*='col-']:before {
+    left: 0;
+}
+.border-between > [class*='col-']:after {
+    right: -1px;
+}
+.border-between > [class*='col-']:first-child:before,
+.border-between > [class*='col-']:last-child:after {
+    display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.light-bg-content {
+  padding: 10px;
+  color: $light-bg-text-color;
+  background: $light-bg;
+}
+
+.dark-bg-content {
+  padding: 10px;
+  color: $dark-bg-text-color;
+  background: $dark-bg;
+}
+
+.navbar-logo {
+  width: $navbar-height - 10px;
+  height: $navbar-height - 10px;
+  @media (min-width: $grid-float-breakpoint) {
+    width: $navbar-desktop-height - 16px;
+    height: $navbar-desktop-height - 16px;
+  }
+}
+
+.navbar {
+  border-bottom: 0;
+  background-color: $navbar-color;
+}
+
+.navbar-default .navbar-nav {
+  font-size: 125%;
+  li a {
+    color: white;
+    &:hover, &:focus {
+      color: black;
+    }
+  }
+  margin: 0;
+  @media (min-width: $grid-float-breakpoint) {
+    margin: 0;
+  }
+}
+
+.navbar-default .navbar-toggle {
+  &:hover, &:focus {
+    background-color: transparent;
+  }
+  .icon-bar {
+    background-color: white;
+  }
+}
+
+.navbar-toggle {
+  border: none;
+}
+
+.navbar-brand-table {
+  height: $navbar-height;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: $navbar-height - 20px;
+  line-height: 100%;
+  th {
+    height: $navbar-height;
+    font-weight: normal;
+  }
+  @media (min-width: $grid-float-breakpoint) {
+    height: $navbar-desktop-height;
+    font-size: $navbar-desktop-height - 40px;
+    th {
+      height: $navbar-desktop-height;
+    }
+  }
+}
+
+.container {
+  padding: 0;
+}
+
+.top {
+  overflow: auto;
+  margin: 0;
+  padding-top: $navbar-height;
+  @media (min-width: $grid-float-breakpoint) {
+    padding-top: $navbar-desktop-height;
+  }
+}
+
+.navbar.navbar-default.navbar-fixed-top {
+  margin: 0;
+}
