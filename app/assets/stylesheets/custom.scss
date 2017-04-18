@@ -20,49 +20,84 @@ body {
     margin: 0;
     padding: 5px 0;
   }
-  .row div {
+  [class*='col-'] {
     padding-top: 10px;
     padding-bottom: 10px;
   }
 }
 
 .border-between > [class*='col-'] {
-  &:before, &:after {
+  &:before {
     background: #FFF;
-    bottom: 0;
+    left: 5%;
     content: " ";
     position: absolute;
-    width: 1px;
+    width: 90%;
+    height: 1px;
+    right: 0;
     top: 0;
   }
-  &:before {
-    left: 0;
+  &:first-child:before, &:last-child:after {
+    display: none;
+  }
+  @media (min-width: $grid-float-breakpoint) {
+    &:after {
+      background: #FFF;
+      bottom: 0;
+      content: " ";
+      position: absolute;
+      width: 1px;
+      top: 0;
+    }
+    &:before {
+      left: 0;
+      width: 1px;
+      height: 100%;
+    }
+    &:after {
+      right: -1px;
+    }
   }
 }
-.border-between > [class*='col-']:before {
+
+.row {
+  margin: 0;
 }
-.border-between > [class*='col-']:after {
-    right: -1px;
+
+.blue-col {
+  background: #5AF;
 }
-.border-between > [class*='col-']:first-child:before,
-.border-between > [class*='col-']:last-child:after {
-    display: none;
+
+.yellow-col {
+  background: #FF7;
+}
+
+.orange-col {
+  background: #FF9960;
 }
 
 .center {
   text-align: center;
 }
 
+.contact-btn {
+  font-size: 18px;
+  width: 100%;
+  margin: 10px 0;
+}
+
 .light-bg-content {
-  padding: 10px;
   color: $light-bg-text-color;
   background: $light-bg;
 }
 
 .dark-bg-content {
-  padding: 10px;
   color: $dark-bg-text-color;
   background: $dark-bg;
+}
+
+.padded {
+  padding: 10px;
 }
 
 .navbar-logo {
@@ -72,6 +107,12 @@ body {
     width: $navbar-desktop-height - 16px;
     height: $navbar-desktop-height - 16px;
   }
+}
+
+@media only screen and (max-width : $screen-md - 1px) {
+  .box {
+    height: auto !important;
+  } 
 }
 
 .navbar {
