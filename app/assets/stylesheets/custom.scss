@@ -67,6 +67,8 @@ body {
 
 .blue-col {
   background: #5AF;
+  background-image: image-url("ocean.jpg");
+  background-size: cover;
 }
 
 .icon-img {
@@ -78,10 +80,14 @@ body {
 
 .yellow-col {
   background: #FF7;
+  background-image: image-url("yellow.jpg");
+  background-size: cover;
 }
 
 .orange-col {
   background: #FF9960;
+  background-image: image-url("orange.jpg");
+  background-size: cover;
 }
 
 .center {
