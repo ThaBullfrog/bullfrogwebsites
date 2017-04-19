@@ -406,5 +406,6 @@
 });
 
 $(function() {
-  $('.box').matchHeight(false);
+  $('.read-box').matchHeight(true);
+  $('.box').matchHeight(true);
 });
