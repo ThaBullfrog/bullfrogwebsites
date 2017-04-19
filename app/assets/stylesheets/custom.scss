@@ -69,6 +69,13 @@ body {
   background: #5AF;
 }
 
+.icon-img {
+  width: 100px;
+  height: 100px;
+  margin: 5px auto;
+  display: block;
+}
+
 .yellow-col {
   background: #FF7;
 }
@@ -110,11 +117,12 @@ body {
   }
 }
 
-@media only screen and (max-width : $screen-md - 1px) {
-  .box {
+.box {
+  overflow: auto;
+  @media only screen and (max-width : $screen-md - 1px) {
     height: auto !important;
-  } 
-}
+  }
+} 
 
 .navbar {
   border-bottom: 0;
