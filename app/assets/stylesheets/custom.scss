@@ -15,15 +15,18 @@ body {
 }
 
 .content {
+  padding: 0;
   color: black;
   font-size: 20px;
+  @media (min-width: $grid-float-breakpoint) {
+    font-size: 32px;
+  }
   h1 {
     margin: 0;
     padding: 5px 0;
   }
   [class*='col-'] {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 60px 10px;
   }
 }
 
@@ -63,31 +66,6 @@ body {
 
 .row {
   margin: 0;
-}
-
-.blue-col {
-  background: #5AF;
-  background-image: image-url("ocean.jpg");
-  background-size: cover;
-}
-
-.icon-img {
-  width: 100px;
-  height: 100px;
-  margin: 5px auto;
-  display: block;
-}
-
-.yellow-col {
-  background: #FF7;
-  background-image: image-url("yellow.jpg");
-  background-size: cover;
-}
-
-.orange-col {
-  background: #FF9960;
-  background-image: image-url("orange.jpg");
-  background-size: cover;
 }
 
 .center {
@@ -162,12 +140,18 @@ body {
   border: none;
 }
 
+.navbar-nav > li > a {
+  @media (min-width: $grid-float-breakpoint) {
+    font-size: 150%;
+  }
+}
+
 .navbar-brand-table {
   height: $navbar-height;
   color: white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  font-size: $navbar-height - 26px;
+  font-size: $navbar-height - 32px;
   line-height: 100%;
   th {
     height: $navbar-height;
@@ -197,4 +181,70 @@ body {
 
 .navbar.navbar-default.navbar-fixed-top {
   margin: 0;
+}
+
+.home-page-main {
+  padding: 150px 0;
+  @media (min-width: $grid-float-breakpoint) {
+    padding: 300px 0;
+  }
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000;
+  color: white;
+  background: black;
+  background-image: image-url("space.jpg");
+  background-size: cover;
+  h1 {
+    font-size: 30px;
+    @media (min-width: $grid-float-breakpoint) {
+      font-size: 75px;
+    }
+  }
+  .text-box {
+    max-width: 700px;
+    border-radius: 18px;
+    //background:rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 10px 18px;
+  }
+}
+
+.icon-img {
+  width: 100px;
+  height: 100px;
+  margin: 5px auto;
+  display: block;
+}
+
+.read-box {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.blue-col {
+  background: #5AF;
+  background-image: image-url("ocean.jpg");
+  background-size: cover;
+  .read-box {
+    background:rgba(85, 170, 255, 0.7)
+  }
+}
+
+.yellow-col {
+  background: #FF7;
+  background-image: image-url("yellow.jpg");
+  background-size: cover;
+  .read-box {
+    background:rgba(255, 255, 119, 0.7)
+  }
+}
+
+.orange-col {
+  background: #FF9960;
+  background-image: image-url("orange.jpg");
+  background-size: cover;
+  .read-box {
+    background:rgba(255, 153, 96, 0.7);
+  }
 }
