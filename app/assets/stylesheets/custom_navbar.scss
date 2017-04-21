@@ -20,6 +20,7 @@
   @media (min-width: $grid-float-breakpoint) {
     min-height: $navbar-desktop-height;
   }
+  font-family: sans;
 }
 
 .navbar-brand {
@@ -29,5 +30,19 @@
     //padding: $navbar-desktop-padding-vertical $navbar-padding-horizontal;
     padding: 0 $navbar-padding-horizontal;
     height: $navbar-desktop-height;
+  }
+}
+
+.navbar-absolute-position {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar-collapse {
+  background: white;
+  @media (min-width: $grid-float-breakpoint) {
+    background: $navbar-color;
   }
 }

@@ -4,6 +4,7 @@
 $screen-md: 992px;
 $screen-md-min: $screen-md;
 $grid-float-breakpoint: $screen-md-min;
+$navbar-default-bg: transparent;
 $navbar-height: 50px;
 $navbar-desktop-height: 74px;
 
@@ -16,12 +17,19 @@ $navbar-desktop-padding-vertical: (($navbar-desktop-height - $line-height-comput
 
 // -- Mine -------------------------------------
 
-$navbar-color: #00A000;
+$navbar-color: transparent;
 $background-color: #FFF;//#060;
 $secondary-color: #FFF;
 $light-bg-text-color: black;
 $light-bg: white;
 $dark-bg-text-color: $secondary-color;
 $dark-bg: black;
+$tertiary-color: #2DC9C8;
+$bright-primary-color: #34BC6E;
+$dark-primary-color: #116639;
+$primary-color: #00884b;
+$dark-secondary-color: #6F1009;
+$darker-secondary-color: #4D0B06;
+$light-secondary-color: #BC3E34;
 
 // ---------------------------------------------
