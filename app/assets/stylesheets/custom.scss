@@ -270,34 +270,6 @@ body {
   display: block;
 }
 
-.read-box {
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.blue-col {
-  background: #5AF;
-  background-image: image-url("ocean.jpg");
-  background-size: cover;
-  .read-box {
-    background:rgba(153, 204, 255, 0.7);
-  }
-}
-
-.yellow-col {
-  background: #FF7;
-  background-image: image-url("yellow.jpg");
-  background-size: cover;
-  .read-box {
-    background:rgba(255, 255, 180, 0.7)
-  }
-}
-
-.red-col {
-  background: #F66;
-  background-image: image-url("rose.jpg");
-  background-size: cover;
-  .read-box {
-    background:rgba(255, 140, 140, 0.7);
-  }
+.bright-primary-color {
+  color: $bright-primary-color;
 }
