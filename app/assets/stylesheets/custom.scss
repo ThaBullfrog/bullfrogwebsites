@@ -209,8 +209,11 @@ body {
   color: #fff;
   color: white;
   background: black;
-  background-image: image-url("lake.jpg");
   background-size: cover;
+  background-image: image-url("lake.jpg");
+  @media (min-width: $grid-float-breakpoint) {
+    background-attachment: fixed;
+  }
   h1 {
     font-family: 'Merriweather', Sans;
     font-size: 30px;
