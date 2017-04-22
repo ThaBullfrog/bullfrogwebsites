@@ -132,12 +132,12 @@ body {
   li a {
     color: black;
     &:hover, &:focus {
-      color: $tertiary-color;
+      color: $color2;
     }
     @media (min-width: $grid-float-breakpoint) {
       color: white;
       &:hover, &:focus {
-        color: $tertiary-color;
+        color: $color2;
       }
     }
   }
@@ -233,7 +233,7 @@ body {
 .home-page-bottom {
   height: 100vh;
   color: white;
-  background: $primary-color;
+  background: black;
   h1 {
     font-family: 'Merriweather', Sans;
     font-size: 30px;
@@ -252,16 +252,24 @@ body {
 .call-to-action {
   overflow: auto;
   padding: 20px;
-  font-size: 150%;
+  font-size: 121%;
   button {
-    font-size: 60%;
+    border-radius: 10px;
+    font-size: 76%;
+    font-weight: bold;
     margin-top: 30px;
     width: 100%;
 
-    background: $dark-secondary-color;
+    background: $color1;
     border: 0;
     &:hover, &:focus {
-      background: $darker-secondary-color;
+      background: $color1-dark;
+    }
+  }
+  @media (min-width: $screen-lg-min) {
+    font-size: 140%;
+    button {
+      font-size: 80%;
     }
   }
 }
@@ -273,6 +281,42 @@ body {
   display: block;
 }
 
-.bright-primary-color {
-  color: $bright-primary-color;
+.full-width-col {
+  padding: 50px;
+  @media (min-width: $grid-float-breakpoint) {
+    font-size: 42px;
+  }
+  h1 {
+    font-size: 180%;
+    line-height: 125%;
+  }
+}
+
+.color1 {
+  color: $color1;
+}
+
+.color1-bg {
+  background: $color1;
+  color: white;
+}
+
+.color2 {
+  color: $color2;
+}
+
+.color2-dark {
+  color: $color2-dark;
+}
+
+.color3 {
+  color: $color3;
+}
+
+.color4 {
+  color: $color4;
+}
+
+.bold {
+  font-weight: bold;
 }
