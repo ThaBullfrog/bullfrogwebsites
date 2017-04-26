@@ -16,6 +16,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  .row {
+    width: 100%;
+  }
 }
 
 .flex-stretcher {
@@ -43,7 +46,8 @@
 
 body {
   background: $background-color;
-  font-size: 24px;
+  font-size: 16px;
+  font-family: 'Open Sans', Sans;
 }
 
 html, body {
@@ -59,7 +63,6 @@ html, body {
 .content {
   padding: 0;
   color: black;
-  font-family: 'Open Sans', Sans;
   a {
     color: $color2;
   }
@@ -67,7 +70,7 @@ html, body {
     color: white;
   }
   .flex-stretcher > [class*='col-'] {
-    padding: 60px $norm-padding;
+    padding: $norm-padding;
     h1 {
       font-weight: bold;
       padding: ($norm-padding / 2) 0;
@@ -75,30 +78,45 @@ html, body {
   }
   .bold-header {
     font-weight: bold;
-    padding: $norm-padding;
-    h1 {
-      padding: $norm-padding;
-    }
   }
   
   // font-size
   font-size: 1em;
   line-height: 1.25em;
-  @media (min-width: $screen-md-min) {
+  @media (min-width: $screen-sm-min) {
     line-height: 1.375em;
   }
   h1, .h1 {
+    font-family: 'Merriweather', Sans;
     margin: 0;
     font-size: 1.5em;
     line-height: 1.25em;
-    @media (min-width: $screen-md-min) {
-      font-size: 1.75em;
-      line-height: 1.125em;
-    }
-    @media (min-width: $screen-lg-min) {
+    /*@media (min-width: $screen-sm-min) {
       font-size: 2em;
-      line-height: 1.05em;
+      line-height: 1.125em;
+    }*/
+    @media (min-width: $screen-md-min) {
+      font-size: 2em;
+      line-height: 1.375em;
     }
+  }
+  .hero-text {
+    @extend .h1;
+    @media (min-width: $screen-sm-min) {
+      font-size: 2em;
+    }
+    @media (min-width: $screen-md-min) {
+      font-size: 3em;
+    }
+    max-width: 700px;
+    padding-left: $norm-padding;
+    padding-right: $norm-padding;
+  }
+}
+
+.navbar li {
+  @media (min-width: $grid-float-breakpoint) {
+    font-size: 1.3em;
   }
 }
 
@@ -163,6 +181,10 @@ html, body {
   padding: $norm-padding;
 }
 
+.padding {
+  height: $norm-padding;
+}
+
 .navbar-logo {
   width: $navbar-height - 10px;
   height: $navbar-height - 10px;
@@ -205,12 +227,6 @@ html, body {
 
 .navbar-toggle {
   border: none;
-}
-
-.navbar-nav > li > a {
-  @media (min-width: $grid-float-breakpoint) {
-    font-size: 150%;
-  }
 }
 
 .navbar-brand-table {
@@ -262,12 +278,6 @@ html, body {
   @media (min-width: $grid-float-breakpoint) {
     background-attachment: fixed;
   }
-  h1 {
-    font-family: 'Merriweather', Sans;
-  }
-  .text-box {
-    max-width: 700px;
-  }
 }
 
 .home-page-header {
@@ -296,15 +306,18 @@ html, body {
 }
 
 .call-to-action {
-  h1, .h1 {
+  .bold-header {
     @media (max-width: $screen-sm-min) {
       font-size: 1em;
     }
   }
   .btn {
+    @media (max-width: $screen-sm-min) {
+      font-size: 1em;
+    }
+    font-family: 'Open Sans', Sans;
     border-radius: 10px;
     font-weight: bold;
-    margin-top: 30px;
     width: 100%;
 
     background: $color1;
