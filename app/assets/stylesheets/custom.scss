@@ -19,6 +19,11 @@
   flex-wrap: wrap;
 }
 
+.flex-stretcher {
+  display: flex;
+  align-items: stretch;
+}
+
 .basic-content-container {
   padding: $norm-padding;
 }
@@ -69,7 +74,7 @@ html, body {
     margin: 0;
     padding: 5px 0;
   }
-  .padded-row > [class*='col-'] {
+  .flex-stretcher > [class*='col-'] {
     padding: 60px $norm-padding;
     h1 {
       font-weight: bold;

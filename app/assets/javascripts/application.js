@@ -404,8 +404,3 @@
     });
 
 });
-
-$(function() {
-  $('.read-box').matchHeight(true);
-  $('.box').matchHeight(true);
-});
