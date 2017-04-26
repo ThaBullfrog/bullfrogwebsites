@@ -43,6 +43,7 @@
 
 body {
   background: $background-color;
+  font-size: 24px;
 }
 
 html, body {
@@ -58,7 +59,6 @@ html, body {
 .content {
   padding: 0;
   color: black;
-  font-size: 16px;
   font-family: 'Open Sans', Sans;
   a {
     color: $color2;
@@ -66,31 +66,38 @@ html, body {
   .btn {
     color: white;
   }
-  @media (min-width: $grid-float-breakpoint) {
-    font-size: 32px;
-  }
-  h1 {
-    font-size: 26px;
-    @media (min-width: $grid-float-breakpoint) {
-      font-size: 36px;
-    }
-    margin: 0;
-    padding: 5px 0;
-  }
   .flex-stretcher > [class*='col-'] {
     padding: 60px $norm-padding;
     h1 {
       font-weight: bold;
+      padding: ($norm-padding / 2) 0;
     }
   }
   .bold-header {
     font-weight: bold;
     padding: $norm-padding;
-    @media (min-width: $grid-float-breakpoint) {
-      font-size: 50px;
-    }
     h1 {
       padding: $norm-padding;
+    }
+  }
+  
+  // font-size
+  font-size: 1em;
+  line-height: 1.25em;
+  @media (min-width: $screen-md-min) {
+    line-height: 1.375em;
+  }
+  h1, .h1 {
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 1.25em;
+    @media (min-width: $screen-md-min) {
+      font-size: 1.75em;
+      line-height: 1.125em;
+    }
+    @media (min-width: $screen-lg-min) {
+      font-size: 2em;
+      line-height: 1.05em;
     }
   }
 }
@@ -138,7 +145,6 @@ html, body {
 }
 
 .contact-btn {
-  font-size: 18px;
   width: 100%;
   margin: 10px 0;
 }
@@ -166,20 +172,12 @@ html, body {
   }
 }
 
-.box {
-  overflow: auto;
-  @media only screen and (max-width : $screen-md - 1px) {
-    height: auto !important;
-  }
-} 
-
 .navbar {
   border-bottom: 0;
   background-color: $navbar-color;
 }
 
 .navbar-default .navbar-nav {
-  font-size: 125%;
   font-family: 'Open Sans', Sans;
   li a {
     color: black;
@@ -188,9 +186,6 @@ html, body {
     }
     @media (min-width: $grid-float-breakpoint) {
       color: white;
-      &:hover, &:focus {
-        color: $color2;
-      }
     }
   }
   margin: 0;
@@ -269,10 +264,6 @@ html, body {
   }
   h1 {
     font-family: 'Merriweather', Sans;
-    font-size: 30px;
-    @media (min-width: $grid-float-breakpoint) {
-      font-size: 70px;
-    }
   }
   .text-box {
     max-width: 700px;
@@ -295,10 +286,6 @@ html, body {
   background: black;
   h1 {
     font-family: 'Merriweather', Sans;
-    font-size: 30px;
-    @media (min-width: $grid-float-breakpoint) {
-      font-size: 75px;
-    }
   }
   .text-box {
     max-width: 700px;
@@ -309,12 +296,13 @@ html, body {
 }
 
 .call-to-action {
-  overflow: auto;
-  padding: 20px;
-  font-size: 121%;
+  h1, .h1 {
+    @media (max-width: $screen-sm-min) {
+      font-size: 1em;
+    }
+  }
   .btn {
     border-radius: 10px;
-    font-size: 76%;
     font-weight: bold;
     margin-top: 30px;
     width: 100%;
@@ -323,12 +311,6 @@ html, body {
     border: 0;
     &:hover, &:focus {
       background: $color1-dark;
-    }
-  }
-  @media (min-width: $screen-lg-min) {
-    font-size: 140%;
-    .btn {
-      font-size: 80%;
     }
   }
 }
@@ -340,30 +322,13 @@ html, body {
   display: block;
 }
 
-.large {
-  padding: $norm-padding;
-  font-size: 120%;
-  @media (min-width: $grid-float-breakpoint) {
-    font-size: 52px;
-  }
-  h1 {
-    font-size: 180%;
-    line-height: 125%;
-  }
-}
-
 .page-min-height {
   min-height: 100vh;
 }
 
 .features-top-parent {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  border-width: 0;
-  border-top-width: 2px;
-  border-style: solid;
-  border-color: black;
 }
 
 .flex-grow {
