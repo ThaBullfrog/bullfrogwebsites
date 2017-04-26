@@ -16,12 +16,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .flex-stretcher {
   display: flex;
   align-items: stretch;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .basic-content-container {
@@ -326,22 +329,6 @@ html, body {
     font-size: 140%;
     .btn {
       font-size: 80%;
-    }
-  }
-  .secondary {
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
-    font-size: 50%;
-    margin-top: 30px;
-    @media (min-width: $screen-lg-min) {
-      margin-top: 60px;
-    }
-    .btn {
-      background: $grey;
-      &:hover, &:focus {
-        background: $grey-dark;
-      }
     }
   }
 }
