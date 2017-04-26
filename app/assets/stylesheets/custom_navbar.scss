@@ -35,6 +35,7 @@
 
 .navbar-absolute-position {
   position: absolute;
+  z-index: 5;
   top: 0;
   left: 0;
   width: 100%;
@@ -45,4 +46,12 @@
   @media (min-width: $grid-float-breakpoint) {
     background: $navbar-color;
   }
+}
+
+.navbar-default .navbar-collapse.collapse.in {
+  border: 1px solid black;
+}
+
+.navbar-default .navbar-collapse.collapsing {
+  border: 1px solid black;
 }
