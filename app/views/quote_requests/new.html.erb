@@ -1,0 +1,24 @@
+<div class="small-header"></div>
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 padded">
+    Email:<br>
+    ***************@******.com<br><br>
+
+    Phone:<br>
+    (***) ***-****<br><br>
+
+    <h1 class="bold">Free Quote Form</h1><br>
+    <%= form_for(@quote_request, url: contact_path) do |f| %>
+      <% if @quote_request.errors.any? %>
+        <%= render html: show_errors(@quote_request.errors.full_messages) %>
+      <% end %>
+      <%= f.label :email %>
+      <%= f.text_field :email, class: "form-control" %><br>
+
+      <%= f.label :message %>
+      <%= f.text_area :message, class: "form-control" %><br>
+
+      <%= f.submit "Send quote request.", class: "btn btn-lg btn-primary form-control" %>
+    <% end %>
+  </div>
+</div>

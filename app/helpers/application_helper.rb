@@ -16,6 +16,19 @@ module ApplicationHelper
     return returns.join.html_safe
   end
 
+  def show_errors(errors)
+    str = '<div class="alert alert-danger">'
+    errors.each_with_index do |error, i|
+      str += '&bull;&nbsp;'
+      str += error
+      unless(i == errors.length - 1)
+        str += "<br>"
+      end
+    end
+    str += '</div><br>'
+    return str.html_safe
+  end
+
   def top(color: "white")
     render(partial: 'shared/top', locals: { color: color })
   end
