@@ -3,7 +3,7 @@ require 'test_helper'
 class QuoteRequestTest < ActiveSupport::TestCase
 
   def setup
-    @request = QuoteRequest.new(name: 'valid name', email: 'validemail@example.com', message: 'valid')
+    @request = QuoteRequest.new(name: 'valid name', email: 'validemail@example.com', description: 'valid')
   end
 
   test "should be valid" do
@@ -40,8 +40,8 @@ class QuoteRequestTest < ActiveSupport::TestCase
     assert_not @request.valid?
   end
 
-  test "message should not be blank" do
-    @request.message = '     '
+  test "description should not be blank" do
+    @request.description = '     '
     assert_not @request.valid?
   end
 

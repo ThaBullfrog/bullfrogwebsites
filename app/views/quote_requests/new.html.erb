@@ -8,7 +8,7 @@
     (***) ***-****<br><br>
 
     <h1 class="bold">Free Quote Form</h1><br>
-    <%= show_flashes %><br>
+    <%= show_flashes %>
     <%= form_for(@quote_request, url: contact_path) do |f| %>
       <% if @quote_request.errors.any? %>
         <%= show_errors(@quote_request.errors.full_messages) %>
@@ -20,8 +20,26 @@
       <%= f.label :email %>
       <%= f.text_field :email, class: "form-control" %><br>
 
-      <%= f.label :message %>
-      <%= f.text_area :message, class: "form-control" %><br>
+      <%= f.label :contact_form, class: "my-checkbox" do %>
+        <%= f.check_box :contact_form %>
+        <span>I will a contact/quote form like this one.</span>
+      <% end %><br>
+
+      <%= f.label :accounts, class: "my-checkbox" do %>
+        <%= f.check_box :accounts %>
+        <span>I will need to allow users to register accounts on my website.</span>
+      <% end %><br>
+
+      <%= f.label :ecommerce, class: "my-checkbox" do %>
+        <%= f.check_box :ecommerce %>
+        <span>I will need to sell items from my website.</span>
+      <% end %><br>
+
+      <%= f.label :website, "Optional: Enter the link to your current website." %>
+      <%= f.text_field :website, class: "form-control" %><br>
+
+      <%= f.label :description, "Provide a description of what you want." %>
+      <%= f.text_area :description, class: "form-control" %><br>
 
       <%= recaptcha_tags %><br>
 

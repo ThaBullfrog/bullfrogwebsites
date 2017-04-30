@@ -1,4 +1,8 @@
 Name: <%= @request.name %>
 Email: <%= @request.email %>
-Message:
-<%= @request.message %>
+Contact Form: <%= @request.contact_form? %>
+Account Registration: <%= @request.accounts? %>
+Ecommerce: <%= @request.ecommerce? %>
+
+Description:
+<%= @request.description %>

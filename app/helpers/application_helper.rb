@@ -13,6 +13,7 @@ module ApplicationHelper
     flash.each do |message_type, message|
       returns.push(("<div class=\"alert alert-" + message_type + "\">" + message + "</div>"))
     end
+    returns.push("<br>") unless flash.empty?
     return returns.join.html_safe
   end
 
