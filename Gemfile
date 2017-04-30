@@ -37,6 +37,14 @@ gem 'capistrano-rvm', '~> 0.1'
 
 gem 'bootstrap-sass', '~> 3.3'
 
+# Use dotenv for development server
+group :development, :test do
+  gem 'dotenv-rails', '~> 2.2', require: 'dotenv/rails-now'
+end
+
+# Use reCAPTCHA to defeat robots
+gem 'recaptcha', '~> 4.3', require: 'recaptcha/rails'
+
 group :development, :test do
   gem 'sqlite3', '~> 1.3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

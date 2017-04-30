@@ -26,7 +26,7 @@ module ApplicationHelper
       end
     end
     str += '</div><br>'
-    return str.html_safe
+    render html: str.html_safe
   end
 
   def top(color: "white")

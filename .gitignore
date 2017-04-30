@@ -20,5 +20,8 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-#Ignore Spring files.
+# Ignore Spring files.
 /spring/*.pid
+
+# Don't put .env under version control
+.env
