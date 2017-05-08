@@ -17,6 +17,7 @@ $navbar-desktop-padding-vertical: (($navbar-desktop-height - $line-height-comput
 
 // -- Mine -------------------------------------
 
+$text-color: #333333;
 $navbar-color: transparent;
 $background-color: #FFF;//#060;
 $secondary-color: #FFF;
@@ -25,7 +26,8 @@ $light-bg: white;
 $dark-bg-text-color: $secondary-color;
 $dark-bg: black;
 
-$norm-padding: 25px;
+$mobile-padding: 25px;
+$desktop-padding: 50px;
 
 $color1:        #00884B; // Green 50
 $color1-dark:   #12512e; //Green 70
@@ -35,5 +37,9 @@ $color3:        #71237C; // Purple 70
 $color4:        #008673; // Teal 50
 $grey:          #777677; // Gray 50
 $grey-dark:     #464646; // Gray 70
+
+$maintainable-color: #AD6418; // Orange 50
+$responsive-color:   #2D74DA; // Blue 50
+$appealing-color:    #E62325; // Red 50
 
 // ---------------------------------------------
