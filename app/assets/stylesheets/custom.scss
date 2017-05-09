@@ -6,6 +6,26 @@
   box-sizing:         border-box;
 }
 
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(.1, .1, .1);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
 .collapsing {
   -webkit-transition: height .1s ease;
        -o-transition: height .1s ease;
@@ -210,20 +230,11 @@ html, body {
     margin: 0;
     font-size: 1.4em;
     line-height: 1.25em;
-    /*@media (min-width: $screen-sm-min) {
-      font-size: 2em;
-      line-height: 1.125em;
-    }
-    @media (min-width: $screen-md-min) {
-      font-size: 2em;
-      line-height: 1.375em;
-    }*/
   }
   .hero-text {
     @extend .h1;
-    /*@media (min-width: $screen-sm-min) {
-      font-size: 2em;
-    }*/
+    @extend .animated;
+    @extend .zoomIn;
     @media (min-width: $screen-sm-min) {
       font-size: 2em;
     }
@@ -410,7 +421,6 @@ html, body {
   @extend .padded;
   text-align: center;
   color: white;
-  background: $color1;
   background-size: cover;
   background-position: center center;
   @media (min-width: $screen-lg-min) {

@@ -16,8 +16,10 @@
 //= require turbolinks
 //= require_tree .
 
-/**
-* jquery-match-height 0.7.2 by @liabru
-* http://brm.io/jquery-match-height/
-* License: MIT
-*/
+/* global $ */
+
+$( document ).on('turbolinks:render', function() {
+  if (document.documentElement.hasAttribute("data-turbolinks-preview")) {
+    $(".hero-text").css('display', 'none');
+  }
+});
