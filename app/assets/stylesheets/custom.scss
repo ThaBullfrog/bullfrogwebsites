@@ -7,11 +7,32 @@
 }
 
 .animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
+  @media(min-width: $grid-float-breakpoint) {
+    animation-play-state: paused;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
 }
 
-@keyframes zoomIn {
+.animated-parent {
+  .animated-child {
+    @media(min-width: $grid-float-breakpoint) {
+      animation-play-state: paused;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+  }
+
+  .in-view {
+    animation-play-state: running;
+  }
+}
+
+.in-view {
+  animation-play-state: running;
+}
+
+@keyframes zoom-in {
   from {
     opacity: 0;
     -webkit-transform: scale3d(.1, .1, .1);
@@ -23,8 +44,56 @@
   }
 }
 
-.zoomIn {
-  animation-name: zoomIn;
+.zoom-in {
+  animation-name: zoom-in;
+}
+
+@keyframes fade-in-left {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-in-left {
+  animation-name: fade-in-left;
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-in-right {
+  animation-name: fade-in-right;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-in-up {
+  animation-name: fade-in-up;
 }
 
 .collapsing {
@@ -234,8 +303,6 @@ html, body {
   }
   .hero-text {
     @extend .h1;
-    @extend .animated;
-    @extend .zoomIn;
     @media (min-width: $screen-sm-min) {
       font-size: 2em;
     }
