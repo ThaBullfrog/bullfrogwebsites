@@ -18,6 +18,8 @@
 
 /* global $ */
 
+var percent_scroll_past_to_animate = 50;
+
 $( document ).on('turbolinks:render', function() {
   if (document.documentElement.hasAttribute("data-turbolinks-preview")) {
     $(".animated").css('display', 'none');
@@ -25,17 +27,17 @@ $( document ).on('turbolinks:render', function() {
   }
 });
 
-$animation_elements = $('.animated');
-$animation_parent_elements = $('.animated-parent');
-$animation_elements_positions = []
-$animation_parent_elements_positions = []
-$window = $( window );
+var $animation_elements = $('.animated');
+var $animation_parent_elements = $('.animated-parent');
+var $animation_elements_positions = []
+var $animation_parent_elements_positions = []
+var $window = $( window );
 
 function update_animation_elements_positions() {
   $animation_elements_positions = []
   $.each($animation_elements, function() {
     var $element = $(this)
-    $animation_elements_positions.push({elem: $element, position: $element.offset().top + $element.outerHeight() / 2})
+    $animation_elements_positions.push({elem: $element, position: $element.offset().top + $element.outerHeight() * (percent_scroll_past_to_animate / 100)})
   });
 }
 
@@ -43,13 +45,15 @@ function update_animation_parent_elements_positions() {
   $animation_parent_elements_positions = []
   $.each($animation_parent_elements, function() {
     var $element = $(this)
-    $animation_parent_elements_positions.push({elem: $element, position: $element.offset().top + $element.outerHeight() / 2})
+    $animation_parent_elements_positions.push({elem: $element, position: $element.offset().top + $element.outerHeight() * (percent_scroll_past_to_animate / 100)})
   });
 }
 
 $( document ).on('turbolinks:load', function() {
   $animation_elements = $(".animated");
+  $animation_elements.addClass('dont-animate-yet');
   $animation_parent_elements = $(".animated-parent");
+  $(".animated-child", $animation_parent_elements).addClass('dont-animate-yet');
   update_animation_elements_positions();
   update_animation_parent_elements_positions();
   check_if_in_view();
@@ -69,6 +73,7 @@ function check_if_in_view() {
     if ((element_middle_position >= window_top_position) &&
         (element_middle_position <= window_bottom_position)) {
       $element.addClass('in-view');
+      $element.removeClass('dont-animate-yet');
     } else {
       $element.removeClass('in-view');
     }
@@ -83,6 +88,7 @@ function check_if_in_view() {
     if ((element_middle_position >= window_top_position) &&
         (element_middle_position <= window_bottom_position)) {
       $(".animated-child", $element).addClass('in-view');
+      $(".animated-child", $element).removeClass('dont-animate-yet');
     } else {
       $(".animated-child", $element).removeClass('in-view');
     }

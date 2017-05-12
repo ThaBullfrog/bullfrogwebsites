@@ -6,21 +6,22 @@
   box-sizing:         border-box;
 }
 
+.dont-animate-yet {
+  -webkit-animation: none !important;
+  visibility: hidden;
+}
+
 .animated {
-  @media(min-width: $grid-float-breakpoint) {
-    animation-play-state: paused;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-  }
+  animation-play-state: paused;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
 .animated-parent {
   .animated-child {
-    @media(min-width: $grid-float-breakpoint) {
-      animation-play-state: paused;
-      animation-duration: 1s;
-      animation-fill-mode: both;
-    }
+    animation-play-state: paused;
+    animation-duration: 1s;
+    animation-fill-mode: both;
   }
 
   .in-view {
