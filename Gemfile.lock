@@ -228,6 +228,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   bootstrap-sass (~> 3.3)
   byebug
   capistrano (~> 3.8)

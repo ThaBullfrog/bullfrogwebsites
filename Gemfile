@@ -35,6 +35,8 @@ gem 'capistrano-rails', '~> 1.2'
 gem 'capistrano-passenger', '~> 0.2'
 gem 'capistrano-rvm', '~> 0.1'
 
+gem 'autoprefixer-rails'
+
 gem 'bootstrap-sass', '~> 3.3'
 
 # Use dotenv for development server
