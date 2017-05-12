@@ -22,8 +22,10 @@ var percent_scroll_past_to_animate = 50;
 
 $( document ).on('turbolinks:render', function() {
   if (document.documentElement.hasAttribute("data-turbolinks-preview")) {
-    $(".animated").css('display', 'none');
-    $(".animated-child").css('display', 'none');
+    var $animated = $(".animated");
+    $animated.addClass('dont-animate-yet');
+    var $animated_child = $(".animated-child");
+    $animated_child.addClass('dont-animate-yet');
   }
 });
 
