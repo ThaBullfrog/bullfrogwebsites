@@ -39,6 +39,8 @@ gem 'autoprefixer-rails'
 
 gem 'bootstrap-sass', '~> 3.3'
 
+gem 'sitemap_generator', '~> 5.3'
+
 # Use dotenv for development server
 group :development, :test do
   gem 'dotenv-rails', '~> 2.2', require: 'dotenv/rails-now'
