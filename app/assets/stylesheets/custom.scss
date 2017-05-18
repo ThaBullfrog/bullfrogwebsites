@@ -487,7 +487,10 @@ html, body {
 .basic-header {
   @extend .page-min-height;
   @extend .flex-center;
-  @extend .padded;
+  padding: (3 * $mobile-padding) $mobile-padding;
+  @media (min-width: $grid-float-breakpoint) {
+    padding: (3 * $desktop-padding) $desktop-padding;
+  }
   text-align: center;
   color: white;
   background-size: cover;
@@ -508,7 +511,8 @@ html, body {
 }
 
 .home-page-bottom {
-  height: 100vh;
+  @extend .padded;
+  min-height: 100vh;
   color: white;
   background: black;
   h1 {
