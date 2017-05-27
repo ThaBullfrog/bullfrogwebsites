@@ -111,6 +111,11 @@
   }
 }
 
+.block-center {
+  display: block;
+  margin: auto;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -124,6 +129,21 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-space-between-except-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: $grid-float-breakpoint) {
+    justify-content: center;
+  }
 }
 
 .mobile-order-1 {
@@ -149,6 +169,20 @@
     width: 450px;
     height: 450px;
   }
+  @media (max-width: $grid-float-breakpoint) {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+  }
+}
+
+.no-left-padding {
+  padding-left: 0 !important;
+}
+
+.no-right-padding {
+  padding-right: 0 !important;
 }
 
 .icon img {
@@ -294,7 +328,7 @@ html, body {
     line-height: 1.375em;
   }
   @media (min-width: $grid-float-breakpoint) {
-    font-size: 2em
+    font-size: 1.25em
   }
   h1, .h1 {
     font-family: 'Merriweather', Sans;
@@ -305,7 +339,7 @@ html, body {
   .hero-text {
     @extend .h1;
     @media (min-width: $screen-sm-min) {
-      font-size: 2em;
+      font-size: 3em;
     }
     max-width: 700px;
     padding-left: $mobile-padding;
@@ -389,6 +423,15 @@ html, body {
   padding: $mobile-padding;
   @media (min-width: $grid-float-breakpoint) {
     padding: $desktop-padding;
+  }
+}
+
+.padded-vertically {
+  padding-top: $mobile-padding;
+  padding-bottom: $mobile-padding;
+  @media (min-width: $grid-float-breakpoint) {
+    padding-top: $desktop-padding;
+    padding-bottom: $desktop-padding;
   }
 }
 
@@ -569,6 +612,10 @@ html, body {
   flex-grow: 1;
 }
 
+.color1-bright {
+  color: $color1-bright;
+}
+
 .color1 {
   color: $color1;
 }
@@ -594,6 +641,10 @@ html, body {
   color: $color4;
 }
 
+.grey-light {
+  color: $grey-light;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -604,4 +655,61 @@ html, body {
   @media (min-width: $grid-float-breakpoint) {
     height: $navbar-desktop-height;
   }
+}
+
+.call-to-action-btn {
+  margin: 20px auto;
+  display: block;
+  width: 300px;
+  border-radius: 2em;
+  padding: 10px;
+  border: 2px solid white;
+  color: white;
+  &:hover, &:focus {
+    text-decoration: none;
+    background: white;
+    color: black;
+  }
+}
+
+a.call-to-action-btn {
+  color: white;
+}
+
+.colored-call-to-action-btn {
+  margin: 20px auto;
+  display: block;
+  width: 300px;
+  border-radius: 2em;
+  padding: 10px;
+  border: 2px solid $color1-bright;
+  color: $color1-bright;
+  &:hover, &:focus {
+    text-decoration: none;
+    background: $color1-bright;
+    color: black;
+  }
+}
+
+a.colored-call-to-action-btn {
+  color: $color1-bright;
+}
+
+.light-grey-call-to-action-btn {
+  margin: 20px auto;
+  display: block;
+  width: 300px;
+  border-radius: 2em;
+  padding: 10px;
+  border: 2px solid $grey-light;
+  color: $grey-light;
+  &:hover, &:focus {
+    text-decoration: none;
+    background: $grey-light;
+    color: black;
+  }
+}
+
+a.light-grey-call-to-action-btn {
+  color: $grey-light;
 }

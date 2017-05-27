@@ -18,7 +18,7 @@
 
 /* global $ */
 
-var percent_scroll_past_to_animate = 50;
+var percent_scroll_past_to_animate = 30;
 
 $( document ).on('turbolinks:render', function() {
   if (document.documentElement.hasAttribute("data-turbolinks-preview")) {
@@ -72,12 +72,9 @@ function check_if_in_view() {
     var element_middle_position = $info.position;
 
     //check to see if this current container is within viewport
-    if ((element_middle_position >= window_top_position) &&
-        (element_middle_position <= window_bottom_position)) {
+    if ((element_middle_position <= window_bottom_position)) {
       $element.addClass('in-view');
       $element.removeClass('dont-animate-yet');
-    } else {
-      $element.removeClass('in-view');
     }
   }
   var array2_length = $animation_parent_elements_positions.length;
@@ -87,12 +84,9 @@ function check_if_in_view() {
     var element_middle_position = $info.position;
 
     //check to see if this current container is within viewport
-    if ((element_middle_position >= window_top_position) &&
-        (element_middle_position <= window_bottom_position)) {
+    if ((element_middle_position <= window_bottom_position)) {
       $(".animated-child", $element).addClass('in-view');
       $(".animated-child", $element).removeClass('dont-animate-yet');
-    } else {
-      $(".animated-child", $element).removeClass('in-view');
     }
   }
 }

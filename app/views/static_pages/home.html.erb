@@ -1,14 +1,16 @@
 <div class="home-page-header">
     <h1 class="animated zoom-in hero-text">Make a <span class="color2">great</span> first impression.</h1>
 </div>
-<div class="flex-space-around flex-wrap">
-  <div class="animated fade-in-left padded"><%= image_tag 'search.svg', class: "display-image" %></div>
+<div class="container"><div class="flex-space-between-except-mobile flex-wrap">
+  <div class="animated fade-in-left"><%= image_tag 'search.svg', class: "display-image padded" %></div>
   <div class="animated fade-in-right width-50-percent padded">
     Most people search online before deciding where to buy. This means your website is often a person's first impression of your business. I can make you a website that will maximize the amount of viewers who choose your business.
   </div>
-</div>
-<div class="features-top-parent">
-  <h1 class="color1-bg padded">1-up the competition. Make sure your website is:</h1>
+</div></div>
+<h1 class="color1-bg">
+  <div class="container"><div class="padded">1-up the competition. Make sure your website is:</div></div>
+</h1>
+<div class="container">
   <div class="row padded-row flex-grow flex-center">
     <div class="flex-center flex-stretcher flex-wrap">
       <div class="col-md-6 col-lg-4">
@@ -29,25 +31,21 @@
     </div>
   </div>
 </div>
-<h1 class="basic-content-container color1-bg">
-  Launch your web application.
+<h1 class="color1-bg">
+  <div class="container"><div class="padded">Launch your web application.</div></div>
 </h1>
-<div class="flex-space-around flex-wrap">
+<div class="container"><div class="flex-space-between-except-mobile flex-wrap">
   <div class="animated fade-in-left width-50-percent padded mobile-order-2">
     If you need a website with dynamic, interactive features such as an online web store, a typical designer wouldn't be able to help you. However, I am a web developer as well as designer. I can add any dynamic features your business requires.
   </div>
-  <div class="animated-parent"><div class="animated-child fade-in-up padded mobile-order-1"><%= image_tag 'rocket.svg', class: "display-image" %></div></div>
-</div>
-<div class="home-page-bottom flex-center center">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="call-to-action">
-        <h1 class="bold-header padded">Interested?</h1>
-        <a href="<%= contact_path %>" class="btn btn-lg btn-primary h1">Get a quote.</a>
-        <br><br><br>
-        <h1 class="bold-header padded">Still not sure?</h1>
-        <a href="<%= about_path %>" class="btn btn-lg btn-primary  h1">Find out more about me.</a>
-      </div>
-    </div>
+  <div class="animated-parent"><div class="animated-child fade-in-up mobile-order-1"><%= image_tag 'rocket.svg', class: "display-image padded" %></div></div>
+</div></div>
+<div class="dark-bg-content"><div class="container">
+  <div class="center padded">
+    <h1 class="color1-bright bold-header">Interested?</h1>
+    <a href="<%= contact_path %>" class="colored-call-to-action-btn">Get a quote.</a>
+    <br><br>
+    <h1 class="grey-light bold-header">Still not sure?</h1>
+    <a href="<%= about_path %>" class="light-grey-call-to-action-btn">Find out more about me.</a>
   </div>
-</div>
+</div></div>
