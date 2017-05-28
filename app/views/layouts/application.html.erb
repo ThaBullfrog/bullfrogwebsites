@@ -14,8 +14,10 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <div class="container-fluid content">
-      <%= yield %>
+    <div class="no-overflow">
+      <div class="container-fluid content">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

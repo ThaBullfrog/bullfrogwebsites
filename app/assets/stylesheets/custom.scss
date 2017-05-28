@@ -294,6 +294,10 @@ html, body {
   overflow-x: hidden;
 }
 
+.no-overflow {
+  overflow-x: hidden;
+}
+
 .alert {
   margin: 5px;
 }
@@ -569,29 +573,6 @@ html, body {
   }
 }
 
-.call-to-action {
-  .bold-header {
-    @media (max-width: $screen-sm-min) {
-      font-size: 1em;
-    }
-  }
-  .btn {
-    @media (max-width: $screen-sm-min) {
-      font-size: 1em;
-    }
-    font-family: 'Open Sans', Sans;
-    border-radius: 10px;
-    font-weight: bold;
-    width: 100%;
-
-    background: $color1;
-    border: 0;
-    &:hover, &:focus {
-      background: $color1-dark;
-    }
-  }
-}
-
 .icon-img {
   width: 100px;
   height: 100px;
@@ -657,18 +638,28 @@ html, body {
   }
 }
 
-.call-to-action-btn {
+@mixin call-to-action {
   margin: 20px auto;
   display: block;
-  width: 300px;
+  width: 215px;
+  @media (min-width: $grid-float-breakpoint) {
+    width: 300px;
+  }
   border-radius: 2em;
   padding: 10px;
+  border: 2px solid #888;
+  &:hover, &:focus {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.call-to-action-btn {
+  @include call-to-action;
   border: 2px solid white;
   color: white;
   &:hover, &:focus {
-    text-decoration: none;
     background: white;
-    color: black;
   }
 }
 
@@ -677,17 +668,11 @@ a.call-to-action-btn {
 }
 
 .colored-call-to-action-btn {
-  margin: 20px auto;
-  display: block;
-  width: 300px;
-  border-radius: 2em;
-  padding: 10px;
+  @include call-to-action;
   border: 2px solid $color1-bright;
   color: $color1-bright;
   &:hover, &:focus {
-    text-decoration: none;
     background: $color1-bright;
-    color: black;
   }
 }
 
@@ -696,17 +681,11 @@ a.colored-call-to-action-btn {
 }
 
 .light-grey-call-to-action-btn {
-  margin: 20px auto;
-  display: block;
-  width: 300px;
-  border-radius: 2em;
-  padding: 10px;
+  @include call-to-action;
   border: 2px solid $grey-light;
   color: $grey-light;
   &:hover, &:focus {
-    text-decoration: none;
     background: $grey-light;
-    color: black;
   }
 }
 
