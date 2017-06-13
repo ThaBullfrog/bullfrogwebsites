@@ -97,6 +97,22 @@
   animation-name: fade-in-up;
 }
 
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-in-down {
+  animation-name: fade-in-down;
+}
+
 .collapsing {
   -webkit-transition: height .1s ease;
        -o-transition: height .1s ease;
@@ -549,11 +565,14 @@ html, body {
   @media (min-width: $screen-lg-min) {
     background-attachment: fixed;
   }
+  background-color: $color1-very-dark;
 }
 
 .home-page-header {
   @extend .basic-header;
-  background-image: image-url("lake.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: image-url("hero-image.svg");
 }
 
 .about-page-header {
