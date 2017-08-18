@@ -326,7 +326,7 @@ html, body {
   padding: 0;
   color: $text-color;
   a {
-    color: $color2;
+    color: $link-color;
   }
   .btn {
     color: white;
@@ -714,4 +714,27 @@ a.colored-call-to-action-btn {
 
 a.light-grey-call-to-action-btn {
   color: $grey-light;
+}
+
+.black-bg {
+  min-height: 100vh;
+  background: black;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.website-image {
+  -moz-box-sizing:    content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing:         content-box;
+  padding: $mobile-padding;
+  @media (min-width: $grid-float-breakpoint) {
+    padding: $desktop-padding;
+  }
+  height: 500px;
+  max-height: 80vh;
+  width: auto;
+  margin: auto;
 }
