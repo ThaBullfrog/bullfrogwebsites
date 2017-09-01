@@ -49,9 +49,13 @@
 }
 
 .navbar-default .navbar-collapse.collapse.in {
-  border: 1px solid black;
+  @media (max-width: $grid-float-breakpoint) {
+    border: 1px solid black;
+  }
 }
 
 .navbar-default .navbar-collapse.collapsing {
-  border: 1px solid black;
+  @media (max-width: $grid-float-breakpoint) {
+    border: 1px solid black;
+  }
 }
