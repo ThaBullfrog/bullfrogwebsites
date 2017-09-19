@@ -19,7 +19,7 @@ class QuoteRequestsController < ApplicationController
   private
 
     def quote_request_params
-      return params.require(:quote_request).permit(:name, :email, :contact_form, :accounts, :ecommerce, :website, :description)
+      return params.require(:quote_request).permit(:name, :email, :website, :description, :budget)
     end
 
     def mail_quote_request(request)
