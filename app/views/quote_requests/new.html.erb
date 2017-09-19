@@ -20,26 +20,14 @@
       <%= f.label :email %>
       <%= f.text_field :email, class: "form-control" %><br>
 
-      <%= f.label :contact_form, class: "my-checkbox" do %>
-        <%= f.check_box :contact_form %>
-        <div>I will need a contact/quote form like this one.</div>
-      <% end %><br>
-
-      <%= f.label :accounts, class: "my-checkbox" do %>
-        <%= f.check_box :accounts %>
-        <div>I will need to allow users to register accounts on my website.</div>
-      <% end %><br>
-
-      <%= f.label :ecommerce, class: "my-checkbox" do %>
-        <%= f.check_box :ecommerce %>
-        <div>I will need to sell items from my website.</div>
-      <% end %><br>
-
       <%= f.label :website, "Optional: Enter the link to your current website." %>
       <%= f.text_field :website, class: "form-control" %><br>
 
       <%= f.label :description, "Provide a description of what you want." %>
       <%= f.text_area :description, class: "form-control" %><br>
+      
+      <%= f.label :budget, "Project budget" %>
+      <%= f.text_field :budget, class: "form-control" %><br>
 
       <%= recaptcha_tags %><br>
 

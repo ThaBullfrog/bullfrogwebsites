@@ -9,7 +9,9 @@ class QuoteRequestsTest < ActionDispatch::IntegrationTest
   test "users should be able to submit quote requests" do
     get contact_path
     assert_template 'quote_requests/new'
-    post contact_path, params: { quote_request: { name: 'valid name', email: 'validemail@example.com', description: 'valid message' } }
+    post contact_path, params: { quote_request: { name: 'valid name', 
+                                                  email: 'validemail@example.com', 
+                                                  description: 'valid message' } }
     assert_equal 1, ActionMailer::Base.deliveries.size
     assert_not flash.empty?
   end
@@ -17,7 +19,9 @@ class QuoteRequestsTest < ActionDispatch::IntegrationTest
   test "invalid quote requests should be rejected and errors displayed" do
     get contact_path
     assert_template 'quote_requests/new'
-    post contact_path, params: { quote_request: { name: 'name', email: 'invalidemail', description: 'hello' } }
+    post contact_path, params: { quote_request: { name: 'name', 
+                                                  email: 'invalidemail', 
+                                                  description: 'hello' } }
     assert_select 'div.alert-danger'
   end
 
