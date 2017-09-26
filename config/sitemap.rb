@@ -24,6 +24,6 @@ SitemapGenerator::Sitemap.create do
   #   Article.find_each do |article|
   #     add article_path(article), :lastmod => article.updated_at
   #   end
-  add about_path, changefreq: 'monthly'
+  add work_path, changefreq: 'monthly'
   add contact_path, changefreq: 'monthly'
 end
