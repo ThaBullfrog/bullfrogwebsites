@@ -43,6 +43,8 @@ gem 'sitemap_generator', '~> 5.3'
 
 gem 'haml-rails', '~> 1.0'
 
+gem 'devise', '~> 4.3'
+
 # Use dotenv for development server
 group :development, :test do
   gem 'dotenv-rails', '~> 2.2', require: 'dotenv/rails-now'

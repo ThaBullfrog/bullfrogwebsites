@@ -466,6 +466,10 @@ html, body {
   }
 }
 
+.flashes {
+  padding: $mobile-padding 0;
+}
+
 .navbar-logo {
   width: $navbar-height - 10px;
   height: $navbar-height - 10px;
