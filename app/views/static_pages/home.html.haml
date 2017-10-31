@@ -1,0 +1,52 @@
+.home-page-header
+  %h1.animated.zoom-in.hero-text Powerful design across all devices
+.container.hidden-overflow
+  .flex-space-between-except-mobile.flex-wrap
+    .animated.fade-in-left.width-50-percent.padded.mobile-order-2
+      Bullfrog Websites is a web design and development company located in Meadville, PA. I create responsive websites and web applications for local businesses.
+    .animated-parent
+      .animated-child.fade-in-down.mobile-order-1
+        = image_tag 'location.svg', class: "display-image padded", alt: "location marker"
+.container.hidden-overflow
+  .flex-space-between-except-mobile.flex-wrap
+    .animated.fade-in-left
+      = image_tag 'search.svg', class: "display-image padded", alt: "magnifying glass"
+    .animated.fade-in-right.width-50-percent.padded
+      Most people search online before deciding where to buy. This means your website is often a person's first impression of your business. I can make you a website that will maximize the amount of viewers who choose your business.
+%h1.color1-bg
+  .container
+    .padded 1-up the competition. Make sure your website is:
+.container
+  .row.padded-row.flex-grow.flex-center
+    .flex-center.flex-stretcher.flex-wrap
+      .col-md-6.col-lg-4
+        .icon= image_tag 'maintainable1.svg', alt: "clock"
+        %h1.center Maintainable
+        Having a web designer maintain all your website's information can be expensive. Manage content yourself through a CMS with an easy to use interface.
+      .col-md-6.col-lg-4
+        .icon= image_tag 'responsive1.svg', alt: "mobile phone and desktop computer"
+        %h1.center Responsive
+        Half of internet users are on a mobile device. It is critical for your website to function just as well on mobile devices as it does on desktops.
+      .col-md-6.col-lg-4
+        .icon= image_tag 'appealing1.svg', alt: "rose"
+        %h1.center Appealing
+        Keep your customers on your website by making sure it's nice to look at.
+%h1.color1-bg
+  .container
+    .padded Launch your web application.
+.container.hidden-overflow
+  .flex-space-between-except-mobile.flex-wrap
+    .animated.fade-in-left.width-50-percent.padded.mobile-order-2
+      If you need a website with dynamic, interactive features such as an online web store, a typical designer wouldn't be able to help you. However, I am a web developer as well as designer. I can add any dynamic features your business requires.
+    .animated-parent
+      .animated-child.fade-in-up.mobile-order-1
+        = image_tag 'rocket.svg', class: "display-image padded", alt: "rocket"
+.dark-bg-content
+  .container
+    .center.padded
+      %h1.color1-bright.bold-header Interested?
+      %a.colored-call-to-action-btn{:href => contact_path} Get a quote
+      %br/
+      %br/
+      %h1.grey-light.bold-header Still not sure?
+      %a.light-grey-call-to-action-btn{:href => work_path} View my past work
