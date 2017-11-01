@@ -1,0 +1,5 @@
+= normal_page do
+  .padding
+  %p $6 monthly payments
+  = form_tag pay_path, method: :post do
+    %script.stripe-button{"data-amount" => "600", "data-description" => "$6 monthly payments", "data-key" => Rails.configuration.stripe[:publishable_key], "data-locale" => "auto", :src => "https://checkout.stripe.com/checkout.js"}

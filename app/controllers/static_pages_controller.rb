@@ -6,7 +6,4 @@ class StaticPagesController < ApplicationController
   def work
   end
 
-  def pay
-  end
-
 end

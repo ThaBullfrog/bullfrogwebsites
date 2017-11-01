@@ -8,5 +8,6 @@ Bundler.require(*Rails.groups)
 
 module BullfrogWebsites
   class Application < Rails::Application
+    config.stripe.publishable_key = 'pk_test_DamghPRSC1ziN0B1dGi74h5M'
   end
 end

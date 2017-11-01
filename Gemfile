@@ -45,6 +45,8 @@ gem 'haml-rails', '~> 1.0'
 
 gem 'devise', '~> 4.3'
 
+gem 'stripe-rails', '~> 1.1'
+
 # Use dotenv for development server
 group :development, :test do
   gem 'dotenv-rails', '~> 2.2', require: 'dotenv/rails-now'
