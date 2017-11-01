@@ -8,7 +8,7 @@ $navbar-default-bg: transparent;
 $navbar-height: 50px;
 $navbar-desktop-height: 74px;
 
-$font-size-base: 14px;
+$font-size-base: 16px;
 $line-height-base: 1.428571429;
 $line-height-computed: floor(($font-size-base * $line-height-base));
 $navbar-desktop-padding-vertical: (($navbar-desktop-height - $line-height-computed) / 2);
@@ -30,17 +30,19 @@ $dark-bg: black;
 $mobile-padding: 25px;
 $desktop-padding: 50px;
 
-$color1-bright:    #34BC6E; // Green 30
-$color1:           #00884B; // Green 50
-$color1-dark:      #12512e; // Green 70
-$color1-very-dark: #123b22; // Green 80
-$color2:           #e39d14; // Gold 30
-$color2-dark:      #5b421c; // Gold 70
-$color3:           #71237C; // Purple 70
-$color4:           #008673; // Teal 50
-$grey-light:       #A6A5A6; // Gray 30
-$grey:             #777677; // Gray 50
-$grey-dark:        #464646; // Gray 70
+$color1-bright:      #34BC6E; // Green 30
+$color1:             #00884B; // Green 50
+$color1-dark:        #12512e; // Green 70
+$color1-very-dark:   #123b22; // Green 80
+$color2:             #e39d14; // Gold 30
+$color2-dark:        #5b421c; // Gold 70
+$color3:             #71237C; // Purple 70
+$color4:             #008673; // Teal 50
+$grey-light:         #A6A5A6; // Gray 30
+$grey:               #777677; // Gray 50
+$grey-dark:          #464646; // Gray 70
+
+$stop-color:         #E62325; // Red 50
 
 $maintainable-color: #AD6418; // Orange 50
 $responsive-color:   #2D74DA; // Blue 50

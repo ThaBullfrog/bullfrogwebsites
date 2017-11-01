@@ -43,4 +43,12 @@ module ApplicationHelper
     render(partial: 'shared/top', locals: { color: color })
   end
 
+  def normal_page(&block)
+    render 'shared/normal_page', &block
+  end
+
+  def mailer_page(&block)
+    render 'shared/mailer_page',&block
+  end
+
 end
