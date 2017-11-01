@@ -98,4 +98,6 @@ Rails.application.configure do
     :enable_starttls_auto => true
   }
 
+  config.stripe.publishable_key = 'pk_live_ZmqloQX5B1Ck571SbYRkSrPE'
+
 end
