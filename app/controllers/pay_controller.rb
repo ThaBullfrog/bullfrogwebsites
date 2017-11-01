@@ -5,9 +5,10 @@ class PayController < ApplicationController
 
   def create
     token = params[:stripeToken]
+    email = params[:stripeEmail]
     customer = Stripe::Customer.create(card: token, 
                                        plan: Stripe::Plans::BASIC, 
-                                       email: current_user.email)
+                                       email: email)
     flash[:success] = "You've been subscribed to $6 monthly payments. "                            \
                     + "If this was a mistake email jeremiahkellick@icloud.com "                    \
                     + "or call (814) 573-7139"
