@@ -10,8 +10,8 @@ class PayController < ApplicationController
                                        plan: Stripe::Plans::BASIC, 
                                        email: email)
     flash[:success] = "You've been subscribed to $6 monthly payments. "                            \
-                    + "If this was a mistake email jeremiahkellick@icloud.com "                    \
-                    + "or call (814) 573-7139"
+                      "If this was a mistake email jeremiahkellick@gmail.com "                     \
+                      "or call (814) 573-7139"
     redirect_to pay_path
   end
 
