@@ -6,10 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Bullfrogwebsites
+module BullfrogWebsites
   class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
+    config.stripe.publishable_key = 'pk_test_DamghPRSC1ziN0B1dGi74h5M'
   end
 end

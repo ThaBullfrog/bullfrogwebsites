@@ -1,4 +1,5 @@
 module ApplicationHelper
+
   def full_title(page_title='')
     base_title = "Bullfrog Websites"
     if page_title.empty?
@@ -9,12 +10,20 @@ module ApplicationHelper
   end
 
   def show_flashes
-    returns = Array.new
+    html = Array.new
     flash.each do |message_type, message|
-      returns.push(("<div class=\"alert alert-" + message_type + "\">" + message + "</div>"))
+      html.push(("<div class=\"alert alert-" + message_type + "\">" + message + "</div>"))
     end
-    returns.push("<br>") unless flash.empty?
-    return returns.join.html_safe
+    render 'shared/notices'
+    render html: html.join.html_safe
+  end
+
+  def flash_section
+    render 'shared/flash_section' if !flash.empty?
+  end
+
+  def flash_header
+    render 'shared/flash_header' if !flash.empty?
   end
 
   def show_errors(errors)
@@ -33,4 +42,13 @@ module ApplicationHelper
   def top(color: "white")
     render(partial: 'shared/top', locals: { color: color })
   end
+
+  def normal_page(&block)
+    render 'shared/normal_page', &block
+  end
+
+  def mailer_page(&block)
+    render 'shared/mailer_page',&block
+  end
+
 end

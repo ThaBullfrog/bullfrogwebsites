@@ -1,0 +1,18 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title= full_title(yield(:title))
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => "3k_8C_Y7R1vrm9IxddrUdAsIaSnD7BgV3_2aDJvWm6w", :name => "google-site-verification"}/
+    %meta{:content => "0F2A4A18E4CADE2264CCBD7A62B1BEEF", :name => "msvalidate.01"}/
+    = render 'layouts/shim'
+    = render 'layouts/favicon'
+    %link{:href => "//fonts.googleapis.com/css?family=Open Sans", :rel => "stylesheet"}/
+    %link{:href => "//fonts.googleapis.com/css?family=Merriweather", :rel => "stylesheet"}/
+    = render 'layouts/rails_default'
+  %body
+    = render 'layouts/header'
+    .no-overflow
+      .container-fluid.content
+        = yield

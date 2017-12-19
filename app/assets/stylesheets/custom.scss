@@ -459,11 +459,24 @@ html, body {
   }
 }
 
+.padded-horizontally {
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
+  @media (min-width: $grid-float-breakpoint) {
+    padding-left: $desktop-padding;
+    padding-right: $desktop-padding;
+  }
+}
+
 .padding {
   height: $mobile-padding;
   @media (min-width: $grid-float-breakpoint) {
     height: $desktop-padding;
   }
+}
+
+.flashes {
+  padding: $mobile-padding 0;
 }
 
 .navbar-logo {
@@ -536,6 +549,13 @@ html, body {
 
 .container {
   padding: 0;
+}
+
+.container.padded {
+  padding: 0 $mobile-padding $mobile-padding $mobile-padding;
+  @media (min-width: $grid-float-breakpoint) {
+    padding: 0 $desktop-padding $desktop-padding $desktop-padding;
+  }
 }
 
 .top {
@@ -737,4 +757,46 @@ a.light-grey-call-to-action-btn {
   max-height: 80vh;
   width: auto;
   margin: auto;
+}
+
+.actions input {
+  @extend .btn;
+  @extend .btn-primary;
+}
+
+input {
+  @extend .form-control;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
+
+.navbar .container {
+  padding: 0 $mobile-padding;
+  @media (min-width: $grid-float-breakpoint) {
+    padding: 0 $desktop-padding;
+  }
+}
+
+.block {
+  display: block;
+}
+
+.large-centered {
+  margin: 15px 0;
+  font-size: 2em;
+  text-align: center;
+}
+
+.btn-stop {
+  @include button-variant(#FFF, $stop-color, darken($stop-color, 30%));
 }
