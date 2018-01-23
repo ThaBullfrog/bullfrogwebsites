@@ -301,7 +301,12 @@ textarea.form-control {
 body {
   background: $background-color;
   font-size: 16px;
-  font-family: 'Open Sans', Sans;
+  font-family: 'Roboto', Sans;
+  line-height: 1.48;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  line-height: 1.48;
 }
 
 html, body {
@@ -347,18 +352,14 @@ html, body {
   
   // font-size
   font-size: 1em;
-  line-height: 1.25em;
-  @media (min-width: $screen-sm-min) {
-    line-height: 1.375em;
-  }
   @media (min-width: $grid-float-breakpoint) {
     font-size: 1.25em
   }
   h1, .h1 {
-    font-family: 'Merriweather', Sans;
+    //font-family: 'Merriweather', Sans;
+    font-weight: 900;
     margin: 0;
     font-size: 1.4em;
-    line-height: 1.25em;
   }
   .hero-text {
     @extend .h1;
@@ -494,7 +495,7 @@ html, body {
 }
 
 .navbar-default .navbar-nav {
-  font-family: 'Open Sans', Sans;
+  font-family: 'Roboto', Sans;
   li a {
     color: $text-color;
     &:hover, &:focus {
@@ -526,7 +527,7 @@ html, body {
 .navbar-brand-table {
   height: $navbar-height;
   color: white;
-  font-family: 'Open Sans', Sans;
+  font-family: 'Roboto', Sans;
   font-weight: normal;
   font-size: $navbar-height - 32px;
   line-height: 100%;
@@ -552,9 +553,9 @@ html, body {
 }
 
 .container.padded {
-  padding: 0 $mobile-padding $mobile-padding $mobile-padding;
+  padding: $mobile-padding;
   @media (min-width: $grid-float-breakpoint) {
-    padding: 0 $desktop-padding $desktop-padding $desktop-padding;
+    padding: $desktop-padding;
   }
 }
 

@@ -1,16 +1,22 @@
+- provide :title, "Work"
+- provide :description, "Bullfrog Websites is a web design company in Meadville, PA. View my past work and think about how much more fulfilling your life would be if only you had a website that looked as good as one of these."
 .small-header
 = flash_section
+.container.padded
+  .row
+    .col-md-6
+      View my past work and think about how much more fulfilling your life would be if only you had a website that looked as good as one of these.
 .row
-  .col-md-4.col-md-offset-4.padded
-    %a{:href => "https://pennsylvaniasandwichcompany.com"}
-      %h2.center
+  .col-md-6.col-md-offset-3.padded
+    %a{ href: "https://pennsylvaniasandwichcompany.com" }
+      %h3.center
         The Pennsylvania Sandwich Company
       .flex-center
-        = image_tag 'pa_sandwich_company.jpg',         |
-          class: "website-image",                      |
-          alt: "Pennsylvania Sandwich Company website" |
+        = image_tag 'pa_sandwich_company.jpg', 
+          class: "website-image", 
+          alt: "Pennsylvania Sandwich Company website"
 .dark-bg-content
   .container
     .center.padded
       %h1.color1-bright.bold-header Ready to start on your website?
-      %a.colored-call-to-action-btn{:href => contact_path} Get a quote
+      %a.colored-call-to-action-btn{ href: contact_path } Get a quote

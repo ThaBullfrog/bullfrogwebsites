@@ -9,6 +9,12 @@ module ApplicationHelper
     end
   end
 
+  def description_tag(description='')
+    unless description.empty?
+      return ('<meta name="description" content="' + description + '">').html_safe
+    end
+  end
+
   def show_flashes
     html = Array.new
     flash.each do |message_type, message|

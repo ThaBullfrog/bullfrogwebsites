@@ -1,10 +1,13 @@
+- provide :title, "Web design in Meadville, PA"
+- provide :description, "Bullfrog Websites is a web design and development company in Meadville, PA. I craft responsive websites and web applications from the finest, home grown, all-natural ingredients. I also answer my phone, respond to emails, and get the job done."
 = flash_header
 .home-page-header
-  %h1.animated.zoom-in.hero-text Powerful design across all devices
+  %h1.animated.zoom-in.hero-text
+    Unparalleled skill in making the perfect s'more. I also make websites.
 .container.hidden-overflow
   .flex-space-between-except-mobile.flex-wrap
     .animated.fade-in-left.width-50-percent.padded.mobile-order-2
-      Bullfrog Websites is a web design and development company located in Meadville, PA. I create responsive websites and web applications for local businesses.
+      Bullfrog Websites is a web design and development company in Meadville, PA. I craft responsive websites and web applications from the finest, home grown, all&#8209;natural ingredients. I also answer my phone, respond to emails, and get the job done.
     .animated-parent
       .animated-child.fade-in-down.mobile-order-1
         = image_tag 'location.svg', class: "display-image padded", alt: "location marker"
@@ -13,7 +16,7 @@
     .animated.fade-in-left
       = image_tag 'search.svg', class: "display-image padded", alt: "magnifying glass"
     .animated.fade-in-right.width-50-percent.padded
-      Most people search online before deciding where to buy. This means your website is often a person's first impression of your business. I can make you a website that will maximize the amount of viewers who choose your business.
+      The first thing people tend to do when they have a need is search the internet. Does your business appear in those search results? Does your website look more modern and appealing than King Tut's mummified corpse? Does it actually work on a smart phone without requiring zooming, panning, and nanometer precision tapping? If you answered "no" to any of those questions, you best give me a call. (814)&nbsp;573-7139
 %h1.color1-bg
   .container
     .padded 1-up the competition. Make sure your website is:
@@ -21,24 +24,24 @@
   .row.padded-row.flex-grow.flex-center
     .flex-center.flex-stretcher.flex-wrap
       .col-md-6.col-lg-4
-        .icon= image_tag 'maintainable1.svg', alt: "clock"
-        %h1.center Maintainable
-        Having a web designer maintain all your website's information can be expensive. Manage content yourself through a CMS with an easy to use interface.
-      .col-md-6.col-lg-4
         .icon= image_tag 'responsive1.svg', alt: "mobile phone and desktop computer"
         %h1.center Responsive
-        Half of internet users are on a mobile device. It is critical for your website to function just as well on mobile devices as it does on desktops.
+        Over half of internet users are on mobile devices. That's like at least ten people. It's crucial for your website to function just as well on mobile devices as it does on desktops.
+      .col-md-6.col-lg-4
+        .icon= image_tag 'maintainable1.svg', alt: "clock"
+        %h1.center Maintainable
+        Look, I'd love to do everything for you, but not everyone enjoys sending me their money every time they want to make a small change to their website. Don't worry. You'll be able to manage the content yourself through a CMS with an easy-to-use interface.
       .col-md-6.col-lg-4
         .icon= image_tag 'appealing1.svg', alt: "rose"
         %h1.center Appealing
-        Keep your customers on your website by making sure it's nice to look at.
+        Tip: you can keep your customers from leaving your website by not making their eyes bleed.
 %h1.color1-bg
   .container
     .padded Launch your web application.
 .container.hidden-overflow
   .flex-space-between-except-mobile.flex-wrap
     .animated.fade-in-left.width-50-percent.padded.mobile-order-2
-      If you need a website with dynamic, interactive features such as an online web store, a typical designer wouldn't be able to help you. However, I am a web developer as well as designer. I can add any dynamic features your business requires.
+      If you need a website with dynamic, interactive features such as an online web store, you're in luck. Not only do I have a genius eye for design, but I also possess remarkable programming skills and extreme humility.
     .animated-parent
       .animated-child.fade-in-up.mobile-order-1
         = image_tag 'rocket.svg', class: "display-image padded", alt: "rocket"
@@ -47,7 +50,6 @@
     .center.padded
       %h1.color1-bright.bold-header Interested?
       %a.colored-call-to-action-btn{:href => contact_path} Get a quote
-      %br/
-      %br/
+      %br
       %h1.grey-light.bold-header Still not sure?
       %a.light-grey-call-to-action-btn{:href => work_path} View my past work
