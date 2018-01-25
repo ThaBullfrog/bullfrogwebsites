@@ -595,13 +595,17 @@ html, body {
   background-repeat: no-repeat;
   background-size: contain;
   &::after {
-    bottom: 0;
-    content: "↓";
+    border: 16px solid;
+    border-color: #fff transparent transparent;
+    bottom: 16px;
+    color: white;
+    content: "";
     font-size: 3em;
+    height: 0;
     left: 50%;
-    padding-bottom: 16px;
     position: absolute;
     transform: translate(-50%, 0);
+    width: 0;
   }
 }
 
