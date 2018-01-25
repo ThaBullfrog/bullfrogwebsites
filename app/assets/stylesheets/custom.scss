@@ -591,9 +591,18 @@ html, body {
 
 .home-page-header {
   @extend .basic-header;
+  background-image: image-url("hero-image.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: image-url("hero-image.svg");
+  &::after {
+    bottom: 0;
+    content: "🡣";
+    font-size: 3em;
+    left: 50%;
+    padding-bottom: 16px;
+    position: absolute;
+    transform: translate(-50%, 0);
+  }
 }
 
 .about-page-header {
